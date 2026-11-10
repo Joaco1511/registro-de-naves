@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>comprobar si el servidor rechaza los roles privilegiados.</description>
+   <name>TC_HU14_03_Registro_Rechaza_AUDITOR</name>
+   <tag></tag>
+   <integratedEntity>
+      <productName>TESTOPS</productName>
+      <properties>
+         <entry>
+            <key>lastModifiedByName</key>
+            <value>Joaquin Concepcion Lozano</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByUuid</key>
+            <value>7bee1cfb-4577-43a8-826e-329890072d8d</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>92ae0b67-9efc-45b5-b113-388903580dc1</testCaseGuid>
+</TestCaseEntity>

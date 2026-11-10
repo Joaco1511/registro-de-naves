@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Admin si crea DGMM</description>
+   <name>TC_HU14_05_Administrador_Crea_AUDITOR</name>
+   <tag></tag>
+   <integratedEntity>
+      <productName>TESTOPS</productName>
+      <properties>
+         <entry>
+            <key>lastModifiedByName</key>
+            <value>Joaquin Concepcion Lozano</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByUuid</key>
+            <value>7bee1cfb-4577-43a8-826e-329890072d8d</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>ae01b9c7-2706-490d-b8f6-9de34b7681b5</testCaseGuid>
+</TestCaseEntity>

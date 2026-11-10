@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?><TestCaseEntity><description>HU-13 Sprint 7: reglas D6 aprobadas por la PO.</description><name>TC_HU13_01_Umbrales_Y_Pendientes</name><tag>HU-13</tag><comment></comment><recordOption>OTHER</recordOption><testCaseGuid>dccbd8d8-5fac-4448-b09b-b80b3a7b8d18</testCaseGuid></TestCaseEntity>
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>HU-13 Sprint 7: reglas D6 aprobadas por la PO.</description>
+   <name>TC_HU13_01_Umbrales_Y_Pendientes</name>
+   <tag>HU-13</tag>
+   <integratedEntity>
+      <productName>TESTOPS</productName>
+      <properties>
+         <entry>
+            <key>lastModifiedByName</key>
+            <value>Joaquin Concepcion Lozano</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByUuid</key>
+            <value>7bee1cfb-4577-43a8-826e-329890072d8d</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>dccbd8d8-5fac-4448-b09b-b80b3a7b8d18</testCaseGuid>
+</TestCaseEntity>

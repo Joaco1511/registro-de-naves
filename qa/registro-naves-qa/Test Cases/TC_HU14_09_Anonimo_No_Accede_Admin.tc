@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Unathorized user cannot have admin privileges</description>
+   <name>TC_HU14_09_Anonimo_No_Accede_Admin</name>
+   <tag></tag>
+   <integratedEntity>
+      <productName>TESTOPS</productName>
+      <properties>
+         <entry>
+            <key>createdByName</key>
+            <value>Joaquin Concepcion Lozano</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByName</key>
+            <value>Joaquin Concepcion Lozano</value>
+         </entry>
+         <entry>
+            <key>createdByUuid</key>
+            <value>7bee1cfb-4577-43a8-826e-329890072d8d</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByUuid</key>
+            <value>7bee1cfb-4577-43a8-826e-329890072d8d</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>4c28f2d5-da0f-4797-8997-b408d9b8e10d</testCaseGuid>
+</TestCaseEntity>

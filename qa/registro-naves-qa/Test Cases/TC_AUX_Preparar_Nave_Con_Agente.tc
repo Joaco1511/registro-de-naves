@@ -3,6 +3,20 @@
    <description>Auxiliar: nave con propietario y agente vigente. No va en suites.</description>
    <name>TC_AUX_Preparar_Nave_Con_Agente</name>
    <tag></tag>
+   <integratedEntity>
+      <productName>TESTOPS</productName>
+      <properties>
+         <entry>
+            <key>lastModifiedByName</key>
+            <value>Joaquin Concepcion Lozano</value>
+         </entry>
+         <entry>
+            <key>lastModifiedByUuid</key>
+            <value>7bee1cfb-4577-43a8-826e-329890072d8d</value>
+         </entry>
+      </properties>
+      <type>TESTCASE</type>
+   </integratedEntity>
    <comment></comment>
    <recordOption>OTHER</recordOption>
    <testCaseGuid>eb05c6e0-937a-41b1-a96e-3f31caf2762f</testCaseGuid>

@@ -57,3 +57,7 @@ almacen/
 
 ### Sprint 6: cache que crea Katalon Studio al abrir el proyecto. ###
 qa/registro-naves-qa/.cache/
+# Variables de entorno
+.env
+.env.*
+!.env.exampleg

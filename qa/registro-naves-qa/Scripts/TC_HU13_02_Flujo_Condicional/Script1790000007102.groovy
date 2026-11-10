@@ -1,4 +1,4 @@
-﻿import navesitas.Hu13 as H
+import navesitas.Hu13 as H
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 String agente = H.login('agente@navesitas.pa'), dgmm = H.login('revisor@navesitas.pa')
 // ITC obligatorio y SMC no aplica en la misma nave, durante todo el flujo.
