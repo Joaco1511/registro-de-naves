@@ -21,6 +21,8 @@ services:
     # Evita que el DNS inverso del puente Docker retrase el saludo SMTP.
     command: ["--smtp-disable-rdns"]
     ports: ["1025:1025", "8025:8025"]
+    environment:
+      MP_SMTP_DISABLE_RDNS: "true"
 
 volumes:
   amp-data:

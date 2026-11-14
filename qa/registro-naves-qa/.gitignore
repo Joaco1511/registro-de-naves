@@ -16,3 +16,7 @@ build
 .project
 
 .cache.settings/
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example

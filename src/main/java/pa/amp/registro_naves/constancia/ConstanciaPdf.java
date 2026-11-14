@@ -107,28 +107,56 @@ public class ConstanciaPdf {
             y -= 24;
         }
         void linea(String valor) throws IOException {
-            // Evita operadores de control; el contenido nunca se interpreta como HTML o PDF crudo.
-            String limpio = valor.replaceAll("[\\p{Cntrl}\\s]+", " ").trim();
-            float ancho = PDRectangle.A4.getWidth() - 2 * MARGEN;
-            StringBuilder linea = new StringBuilder();
-            // Corte por puntos Unicode: tambien admite nombres largos sin espacios.
-            for (int i = 0; i < limpio.length();) {
-                int cp = limpio.codePointAt(i);
-                String siguiente = new String(Character.toChars(cp));
-                if (!linea.isEmpty() && fuente.getStringWidth(linea + siguiente) * TAMANO / 1000 > ancho) {
-                    escribir(linea.toString());
-                    linea.setLength(0);
-                }
-                if (!linea.isEmpty() || !siguiente.isBlank()) linea.append(siguiente);
-                i += Character.charCount(cp);
-            }
-            if (!linea.isEmpty()) escribir(linea.toString());
+    // Limpiar caracteres de control y espacios repetidos.
+    String limpio = valor.replaceAll("[\\p{Cntrl}\\s]+", " ").trim();
+
+    float ancho = PDRectangle.A4.getWidth() - 2 * MARGEN;
+
+    // Primero dividir el contenido en líneas.
+    List<String> renglones = new java.util.ArrayList<>();
+    StringBuilder actual = new StringBuilder();
+
+    for (int i = 0; i < limpio.length();) {
+        int cp = limpio.codePointAt(i);
+        String siguiente = new String(Character.toChars(cp));
+
+        if (!actual.isEmpty()
+                && fuente.getStringWidth(actual.toString() + siguiente)
+                    * TAMANO / 1000 > ancho) {
+
+            renglones.add(actual.toString());
+            actual.setLength(0);
         }
-        private void escribir(String valor) throws IOException {
-            if (y < 62) nueva();
-            texto(valor, TAMANO, MARGEN, y, PETROLEO);
-            y -= INTERLINEA;
+
+        if (!actual.isEmpty() || !siguiente.isBlank()) {
+            actual.append(siguiente);
         }
+
+        i += Character.charCount(cp);
+    }
+
+    if (!actual.isEmpty()) {
+        renglones.add(actual.toString());
+    }
+
+    if (renglones.isEmpty()) {
+        return;
+    }
+
+    // Calcular todo el espacio que necesita el contenido.
+    float alturaNecesaria = INTERLINEA * renglones.size();
+
+    // Si no cabe completo, comenzar en una página nueva.
+    if (y - alturaNecesaria < 62) {
+        nueva();
+    }
+
+    // Imprimir todos los fragmentos sin interrumpir el contenido.
+    for (String renglon : renglones) {
+        texto(renglon, TAMANO, MARGEN, y, PETROLEO);
+        y -= INTERLINEA;
+    }
+}
         private void texto(String valor, float tamano, float x, float altura, Color color) throws IOException {
             contenido.beginText();
             contenido.setFont(fuente, tamano);
